@@ -2,6 +2,8 @@
 
 > **English summary.** AlgoLab hub is a private web portal built for one student group of Sciences Po's *AlgoLab* course (investigation of the VisuDSN algorithm used by the French labour inspectorate). It organises teamwork: a categorised document library synchronised with Google Drive (two-way for Google Docs created by the app), a calendar with sessions and deadlines, deadline breakdowns into tasks, a people directory, an investigation-journal section, a discussion wall with replies, and a global search bar. Stack: Next.js 16 (App Router, React 19, TypeScript), Supabase (Auth, Postgres with Row Level Security, pg_cron), Google Drive API, deployed on Vercel. It works on desktop, iOS and Android (including foldables). Access is restricted to `@sciencespo.fr` Google accounts. **No secret and no real data are stored in this repository.**
 
+> **Démo en ligne :** <https://algolab-hub.vercel.app> — la connexion est réservée aux comptes Google `@sciencespo.fr` (les évaluateurs sans compte peuvent consulter la [page de confidentialité](https://algolab-hub.vercel.app/confidentialite), le code et ce README).
+
 ---
 
 ## Sommaire
