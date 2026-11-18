@@ -24,7 +24,12 @@ export async function proxy(request: NextRequest) {
   } = await supabase.auth.getUser();
 
   const path = request.nextUrl.pathname;
-  const isPublic = path.startsWith("/login") || path.startsWith("/confidentialite") || path.startsWith("/auth") || path.startsWith("/api/cron");
+  const isPublic =
+    path.startsWith("/login") ||
+    path.startsWith("/confidentialite") ||
+    path.startsWith("/auth") ||
+    path.startsWith("/api/cron") ||
+    path === "/manifest.webmanifest"; // lu par le navigateur pour « Ajouter à l'écran d'accueil »
   if (!user && !isPublic) {
     const to = request.nextUrl.clone();
     to.pathname = "/login";
